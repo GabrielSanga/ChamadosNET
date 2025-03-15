@@ -1,8 +1,13 @@
 ﻿Public Class frmDepartamentoEditar
 
+#Region "Constructors"
     Public Sub New()
         InitializeComponent()
     End Sub
+
+#End Region
+
+#Region "Methods"
 
     Public Sub AbrirDepartamento(idDepartamento As Integer)
         Dim drChamado As DataRow = Dados.ObeterDepartamento(idDepartamento)
@@ -11,6 +16,9 @@
         Me.txtDescricao.Text = drChamado("Descricao").ToString
     End Sub
 
+#End Region
+
+#Region "Events"
     Private Sub btnFechar_Click(sender As Object, e As EventArgs) Handles btnFechar.Click
         Me.DialogResult = DialogResult.Cancel
         Me.Close()
@@ -34,5 +42,7 @@
 
         Me.Close()
     End Sub
+
+#End Region
 
 End Class

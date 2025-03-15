@@ -1,5 +1,6 @@
 ﻿Public Class frmChamadosEditar
 
+#Region "Constructors"
     Public Sub New()
 
         ' This call is required by the designer.
@@ -13,6 +14,9 @@
 
     End Sub
 
+#End Region
+
+#Region "Methods"
     Public Sub AbrirChamado(ByVal idChamado As Integer)
 
         Dim drChamado As DataRow = Dados.ObterChamado(idChamado)
@@ -28,6 +32,9 @@
 
     End Sub
 
+#End Region
+
+#Region "Events"
     Private Sub btnFechar_Click(sender As Object, e As EventArgs) Handles btnFechar.Click
 
         Me.DialogResult = DialogResult.Cancel
@@ -62,4 +69,7 @@
         Me.Close()
 
     End Sub
+
+#End Region
+
 End Class
