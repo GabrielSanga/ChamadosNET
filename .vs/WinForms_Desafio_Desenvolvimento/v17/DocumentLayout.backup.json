@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\vs-workspace\\Desafio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|c:\\vs-workspace\\desafio\\winforms_desafio_desenvolvimento\\relatorios\\rptdepartamentos.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\relatorios\\rptdepartamentos.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|c:\\vs-workspace\\desafio\\winforms_desafio_desenvolvimento\\frmchamadoseditar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmchamadoseditar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|c:\\vs-workspace\\desafio\\winforms_desafio_desenvolvimento\\relatorios\\rptchamados.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\relatorios\\rptchamados.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|c:\\vs-workspace\\desafio\\winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|c:\\vs-workspace\\desafio\\winforms_desafio_desenvolvimento\\frmdepartamentosrelatorio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmdepartamentosrelatorio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|C:\\vs-workspace\\Desafio\\winforms_desafio_desenvolvimento\\frmchamadosrelatorio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmchamadosrelatorio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|c:\\vs-workspace\\desafio\\winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmChamadosRelatorio.vb",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosRelatorio.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmChamadosRelatorio.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosRelatorio.vb",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmChamadosRelatorio.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T20:08:52.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmDepartamentosRelatorio.vb",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmDepartamentosRelatorio.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmDepartamentosRelatorio.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmDepartamentosRelatorio.vb",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmDepartamentosRelatorio.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABkAAAAAAAAAA==",
+              "Title": "frmChamadosListar.vb [Design]",
+              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
+              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
+              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb [Design]",
+              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T20:08:38.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T21:00:14.925Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "rptChamados.rdlc [Criar]",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\Relatorios\\rptChamados.rdlc",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\Relatorios\\rptChamados.rdlc",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\Relatorios\\rptChamados.rdlc [Criar]",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\Relatorios\\rptChamados.rdlc [Criar]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-03-15T20:30:03.226Z",
-              "EditorCaption": " [Criar]"
+              "Title": "frmChamadosListar.vb",
+              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
+              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
+              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
+              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwDcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-15T21:00:16.4Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "rptDepartamentos.rdlc [Criar]",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\Relatorios\\rptDepartamentos.rdlc",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\Relatorios\\rptDepartamentos.rdlc",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\Relatorios\\rptDepartamentos.rdlc [Criar]",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\Relatorios\\rptDepartamentos.rdlc [Criar]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-03-15T20:29:58.858Z",
-              "EditorCaption": " [Criar]"
+              "Title": "frmChamadosEditar.vb",
+              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosEditar.vb",
+              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmChamadosEditar.vb",
+              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosEditar.vb",
+              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmChamadosEditar.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwDcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-15T20:58:45.884Z",
+              "EditorCaption": ""
             }
           ]
         }

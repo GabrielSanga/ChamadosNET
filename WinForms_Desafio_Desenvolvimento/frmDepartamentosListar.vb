@@ -65,7 +65,7 @@ Public Class frmDepartamentosListar
 
         Dim dlgResult As DialogResult = frm.ShowDialog()
 
-        If dlgResult <> DialogResult.OK Then
+        If dlgResult = DialogResult.OK Then
 
             ' Apenas para listar os dados novamente
             Me.frmPrincipal_Load(sender, e)

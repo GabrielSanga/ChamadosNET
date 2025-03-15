@@ -37,7 +37,10 @@
 
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
 
-        Dim ID As Integer = Integer.Parse(Me.txtID.Text)
+        Dim ID As Integer = 0
+
+        Integer.TryParse(Me.txtID.Text, ID)
+
         Dim Assunto As String = Me.txtAssunto.Text
         Dim Solicitante As String = Me.txtSolicitante.Text
         Dim Departamento As Integer = CInt(Me.cmbDepartamento.SelectedValue)
