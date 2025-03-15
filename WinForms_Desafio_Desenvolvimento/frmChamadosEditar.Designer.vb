@@ -34,8 +34,8 @@ Partial Class frmChamadosEditar
         Me.txtSolicitante = New System.Windows.Forms.TextBox()
         Me.cmbDepartamento = New System.Windows.Forms.ComboBox()
         Me.dtpDataAbertura = New System.Windows.Forms.DateTimePicker()
-        Me.btnSalvar = New System.Windows.Forms.Button()
         Me.btnFechar = New System.Windows.Forms.Button()
+        Me.btnSalvar = New System.Windows.Forms.Button()
         Me.tlpLayoutRoot.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -165,19 +165,6 @@ Partial Class frmChamadosEditar
         Me.dtpDataAbertura.Size = New System.Drawing.Size(110, 20)
         Me.dtpDataAbertura.TabIndex = 9
         '
-        'btnSalvar
-        '
-        Me.btnSalvar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSalvar.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.disk
-        Me.btnSalvar.Location = New System.Drawing.Point(507, 404)
-        Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(114, 34)
-        Me.btnSalvar.TabIndex = 10
-        Me.btnSalvar.Text = "Salvar"
-        Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnSalvar.UseVisualStyleBackColor = True
-        '
         'btnFechar
         '
         Me.btnFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -191,7 +178,20 @@ Partial Class frmChamadosEditar
         Me.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnFechar.UseVisualStyleBackColor = True
         '
-        'frmChamado
+        'btnSalvar
+        '
+        Me.btnSalvar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSalvar.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.disk
+        Me.btnSalvar.Location = New System.Drawing.Point(507, 404)
+        Me.btnSalvar.Name = "btnSalvar"
+        Me.btnSalvar.Size = New System.Drawing.Size(114, 34)
+        Me.btnSalvar.TabIndex = 10
+        Me.btnSalvar.Text = "Salvar"
+        Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSalvar.UseVisualStyleBackColor = True
+        '
+        'frmChamadosEditar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -201,7 +201,7 @@ Partial Class frmChamadosEditar
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frmChamado"
+        Me.Name = "frmChamadosEditar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Netspeed - Desafio Desenvolvimento"
         Me.tlpLayoutRoot.ResumeLayout(False)
@@ -221,6 +221,6 @@ Partial Class frmChamadosEditar
     Friend WithEvents txtSolicitante As TextBox
     Friend WithEvents cmbDepartamento As ComboBox
     Friend WithEvents dtpDataAbertura As DateTimePicker
-    Friend WithEvents btnSalvar As Button
     Friend WithEvents btnFechar As Button
+    Friend WithEvents btnSalvar As Button
 End Class

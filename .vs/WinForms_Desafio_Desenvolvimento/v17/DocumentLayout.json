@@ -1,115 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\vs-workspace\\Desafio\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|c:\\vs-workspace\\desafio\\winforms_desafio_desenvolvimento\\frmdepartamentoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmdepartamentoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|C:\\vs-workspace\\Desafio\\winforms_desafio_desenvolvimento\\frmdepartamentoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmdepartamentoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|C:\\vs-workspace\\Desafio\\winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|C:\\vs-workspace\\Desafio\\winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmchamadoslistar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|C:\\vs-workspace\\Desafio\\winforms_desafio_desenvolvimento\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|C:\\vs-workspace\\Desafio\\winforms_desafio_desenvolvimento\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{1577BCF2-F0B8-40DD-AA10-D54A526301FC}|WinForms_Desafio_Desenvolvimento\\WinForms_Desafio_Desenvolvimento.vbproj|solutionrelative:winforms_desafio_desenvolvimento\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmPrincipal.vb [Design]",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb [Design]",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T13:59:17.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmPrincipal.vb",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmPrincipal.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T13:59:20.14Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmChamadosListar.vb [Design]",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb [Design]",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T14:06:17.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmChamadosListar.vb",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmChamadosListar.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T14:06:19.708Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmDepartamentosListar.vb [Design]",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb [Design]",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T14:06:48.13Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmDepartamentosListar.vb",
-              "DocumentMoniker": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb",
-              "RelativeDocumentMoniker": "WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb",
-              "ToolTip": "C:\\vs-workspace\\Desafio\\WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb",
-              "RelativeToolTip": "WinForms_Desafio_Desenvolvimento\\frmDepartamentosListar.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-15T14:07:13.861Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

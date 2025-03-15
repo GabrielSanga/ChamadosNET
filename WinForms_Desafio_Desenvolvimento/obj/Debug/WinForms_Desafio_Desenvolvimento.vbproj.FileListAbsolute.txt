@@ -71,3 +71,4 @@ C:\vs-workspace\Desafio\WinForms_Desafio_Desenvolvimento\obj\Debug\WinForms.2421
 C:\vs-workspace\Desafio\WinForms_Desafio_Desenvolvimento\obj\Debug\WinForms_Desafio_Desenvolvimento.exe
 C:\vs-workspace\Desafio\WinForms_Desafio_Desenvolvimento\obj\Debug\WinForms_Desafio_Desenvolvimento.xml
 C:\vs-workspace\Desafio\WinForms_Desafio_Desenvolvimento\obj\Debug\WinForms_Desafio_Desenvolvimento.pdb
+C:\vs-workspace\Desafio\WinForms_Desafio_Desenvolvimento\obj\Debug\WinForms_Desafio_Desenvolvimento.frmDepartamentoEditar.resources

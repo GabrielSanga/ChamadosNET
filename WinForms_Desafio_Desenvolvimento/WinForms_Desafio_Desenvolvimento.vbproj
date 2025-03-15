@@ -122,6 +122,12 @@
     <Compile Include="frmChamadosRelatorio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmDepartamentoEditar.Designer.vb">
+      <DependentUpon>frmDepartamentoEditar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartamentoEditar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDepartamentosListar.Designer.vb">
       <DependentUpon>frmDepartamentosListar.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChamadosRelatorio.resx">
       <DependentUpon>frmChamadosRelatorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartamentoEditar.resx">
+      <DependentUpon>frmDepartamentoEditar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDepartamentosListar.resx">
       <DependentUpon>frmDepartamentosListar.vb</DependentUpon>

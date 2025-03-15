@@ -23,15 +23,67 @@ Partial Class frmChamadosListar
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmChamadosListar))
+        Me.btnRelatorio = New System.Windows.Forms.Button()
+        Me.btnExcluir = New System.Windows.Forms.Button()
+        Me.btnAbrir = New System.Windows.Forms.Button()
+        Me.btnNovo = New System.Windows.Forms.Button()
         Me.dgvChamados = New System.Windows.Forms.DataGridView()
         Me.tlpLayoutRoot = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnNovo = New System.Windows.Forms.Button()
-        Me.btnAbrir = New System.Windows.Forms.Button()
-        Me.btnExcluir = New System.Windows.Forms.Button()
-        Me.btnRelatorio = New System.Windows.Forms.Button()
         CType(Me.dgvChamados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tlpLayoutRoot.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'btnRelatorio
+        '
+        Me.btnRelatorio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRelatorio.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.printer
+        Me.btnRelatorio.Location = New System.Drawing.Point(637, 3)
+        Me.btnRelatorio.Name = "btnRelatorio"
+        Me.btnRelatorio.Size = New System.Drawing.Size(144, 34)
+        Me.btnRelatorio.TabIndex = 1
+        Me.btnRelatorio.Text = "Relatório"
+        Me.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnRelatorio.UseVisualStyleBackColor = True
+        '
+        'btnExcluir
+        '
+        Me.btnExcluir.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnExcluir.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.cross
+        Me.btnExcluir.Location = New System.Drawing.Point(303, 3)
+        Me.btnExcluir.Name = "btnExcluir"
+        Me.btnExcluir.Size = New System.Drawing.Size(144, 34)
+        Me.btnExcluir.TabIndex = 1
+        Me.btnExcluir.Text = "Excluir"
+        Me.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnExcluir.UseVisualStyleBackColor = True
+        '
+        'btnAbrir
+        '
+        Me.btnAbrir.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnAbrir.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.folder_horizontal_open
+        Me.btnAbrir.Location = New System.Drawing.Point(153, 3)
+        Me.btnAbrir.Name = "btnAbrir"
+        Me.btnAbrir.Size = New System.Drawing.Size(144, 34)
+        Me.btnAbrir.TabIndex = 1
+        Me.btnAbrir.Text = "Abrir"
+        Me.btnAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAbrir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAbrir.UseVisualStyleBackColor = True
+        '
+        'btnNovo
+        '
+        Me.btnNovo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNovo.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.document
+        Me.btnNovo.Location = New System.Drawing.Point(3, 3)
+        Me.btnNovo.Name = "btnNovo"
+        Me.btnNovo.Size = New System.Drawing.Size(144, 34)
+        Me.btnNovo.TabIndex = 1
+        Me.btnNovo.Text = "Novo"
+        Me.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnNovo.UseVisualStyleBackColor = True
         '
         'dgvChamados
         '
@@ -68,60 +120,9 @@ Partial Class frmChamadosListar
         Me.tlpLayoutRoot.RowCount = 2
         Me.tlpLayoutRoot.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tlpLayoutRoot.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpLayoutRoot.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlpLayoutRoot.Size = New System.Drawing.Size(784, 461)
         Me.tlpLayoutRoot.TabIndex = 1
-        '
-        'btnNovo
-        '
-        Me.btnNovo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnNovo.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.document
-        Me.btnNovo.Location = New System.Drawing.Point(3, 3)
-        Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(144, 34)
-        Me.btnNovo.TabIndex = 1
-        Me.btnNovo.Text = "Novo"
-        Me.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnNovo.UseVisualStyleBackColor = True
-        '
-        'btnAbrir
-        '
-        Me.btnAbrir.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnAbrir.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.folder_horizontal_open
-        Me.btnAbrir.Location = New System.Drawing.Point(153, 3)
-        Me.btnAbrir.Name = "btnAbrir"
-        Me.btnAbrir.Size = New System.Drawing.Size(144, 34)
-        Me.btnAbrir.TabIndex = 1
-        Me.btnAbrir.Text = "Abrir"
-        Me.btnAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAbrir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnAbrir.UseVisualStyleBackColor = True
-        '
-        'btnExcluir
-        '
-        Me.btnExcluir.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnExcluir.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.cross
-        Me.btnExcluir.Location = New System.Drawing.Point(303, 3)
-        Me.btnExcluir.Name = "btnExcluir"
-        Me.btnExcluir.Size = New System.Drawing.Size(144, 34)
-        Me.btnExcluir.TabIndex = 1
-        Me.btnExcluir.Text = "Excluir"
-        Me.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnExcluir.UseVisualStyleBackColor = True
-        '
-        'btnRelatorio
-        '
-        Me.btnRelatorio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRelatorio.Image = Global.WinForms_Desafio_Desenvolvimento.My.Resources.Resources.printer
-        Me.btnRelatorio.Location = New System.Drawing.Point(637, 3)
-        Me.btnRelatorio.Name = "btnRelatorio"
-        Me.btnRelatorio.Size = New System.Drawing.Size(144, 34)
-        Me.btnRelatorio.TabIndex = 1
-        Me.btnRelatorio.Text = "Relatório"
-        Me.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnRelatorio.UseVisualStyleBackColor = True
         '
         'frmChamadosListar
         '
@@ -141,10 +142,10 @@ Partial Class frmChamadosListar
 
     End Sub
 
+    Friend WithEvents btnRelatorio As Button
+    Friend WithEvents btnExcluir As Button
+    Friend WithEvents btnAbrir As Button
+    Friend WithEvents btnNovo As Button
     Friend WithEvents dgvChamados As DataGridView
     Friend WithEvents tlpLayoutRoot As TableLayoutPanel
-    Friend WithEvents btnNovo As Button
-    Friend WithEvents btnAbrir As Button
-    Friend WithEvents btnExcluir As Button
-    Friend WithEvents btnRelatorio As Button
 End Class
