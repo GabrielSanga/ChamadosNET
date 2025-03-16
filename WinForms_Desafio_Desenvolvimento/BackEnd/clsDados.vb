@@ -126,7 +126,6 @@ Public Class Dados
     ' ------------------------------ DEPARTAMENTO ------------------------------
 
     Public Shared Function ListarDepartamentos() As DataTable
-
         Dim dtDepartamentos As New DataTable()
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
@@ -146,11 +145,10 @@ Public Class Dados
         End Using
 
         Return dtDepartamentos
-
     End Function
 
-    Public Shared Function ObeterDepartamento(idDepartamento As Integer) As DataRow
-        Dim drDepartamento As DataRow = Nothing
+    Public Shared Function ObterDepartamento(idDepartamento As Integer) As Departamento
+        Dim objDepartamento As New Departamento
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
 
@@ -162,27 +160,30 @@ Public Class Dados
 
                     Dim dtDepartamento As New DataTable()
                     dbDataAdapter.Fill(dtDepartamento)
-                    drDepartamento = dtDepartamento.Rows(0)
 
+                    If dtDepartamento.Rows.Count > 0 Then
+                        Dim ID As Integer = Util.nInt(dtDepartamento.Rows(0).Item("ID"))
+                        Dim descricao As String = Util.sStr(dtDepartamento.Rows(0).Item("Descricao"))
+
+                        objDepartamento = New Departamento(ID, descricao)
+                    End If
                 End Using
 
             End Using
 
         End Using
 
-        Return drDepartamento
+        Return objDepartamento
     End Function
 
-    Public Shared Function GravarDepartamento(ID As Integer,
-                                              descricao As String) As Boolean
-
+    Public Shared Function GravarDepartamento(objDepartamento As Departamento) As Boolean
         Dim regsAfetados As Integer = -1
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
 
             Using dbCommand As SQLiteCommand = dbConnection.CreateCommand()
 
-                If ID = 0 Then
+                If objDepartamento.ID = 0 Then
 
                     dbCommand.CommandText = "INSERT INTO departamentos (Descricao)" +
                                             "VALUES (@Descricao)"
@@ -195,8 +196,8 @@ Public Class Dados
 
                 End If
 
-                dbCommand.Parameters.AddWithValue("@Descricao", descricao)
-                dbCommand.Parameters.AddWithValue("@ID", ID)
+                dbCommand.Parameters.AddWithValue("@Descricao", objDepartamento.Descricao)
+                dbCommand.Parameters.AddWithValue("@ID", objDepartamento.ID)
 
                 dbConnection.Open()
                 regsAfetados = dbCommand.ExecuteNonQuery()
@@ -207,11 +208,9 @@ Public Class Dados
         End Using
 
         Return (regsAfetados > 0)
-
     End Function
 
     Public Shared Function ExcluirDepartamento(idDepartamento As Integer) As Boolean
-
         Dim regsAfetados As Integer = -1
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
@@ -229,7 +228,6 @@ Public Class Dados
         End Using
 
         Return (regsAfetados > 0)
-
     End Function
 
 End Class

@@ -1,46 +1,54 @@
 ﻿Public Class frmDepartamentoEditar
 
+#Region "Variables"
+
+    Public idDepartamento As Integer = 0
+
+#End Region
+
 #Region "Constructors"
+
     Public Sub New()
         InitializeComponent()
     End Sub
 
-#End Region
+    Public Sub New(idDepartamento As Integer)
+        InitializeComponent()
 
-#Region "Methods"
-
-    Public Sub AbrirDepartamento(idDepartamento As Integer)
-        Dim drChamado As DataRow = Dados.ObeterDepartamento(idDepartamento)
-
-        Me.txtID.Text = CInt(drChamado("ID")).ToString()
-        Me.txtDescricao.Text = drChamado("Descricao").ToString
+        Me.idDepartamento = idDepartamento
     End Sub
 
 #End Region
 
 #Region "Events"
+
+    Public Sub Form_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If Me.idDepartamento > 0 Then
+            Dim objDepartamento As Departamento = Dados.ObterDepartamento(idDepartamento)
+
+            txtID.Text = objDepartamento.ID.ToString()
+            txtDescricao.Text = objDepartamento.Descricao
+        End If
+    End Sub
+
     Private Sub btnFechar_Click(sender As Object, e As EventArgs) Handles btnFechar.Click
-        Me.DialogResult = DialogResult.Cancel
-        Me.Close()
+        DialogResult = DialogResult.Cancel
+        Close()
     End Sub
 
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
-        Dim ID As Integer = 0
+        Dim objChamado As New Departamento(Util.nInt(txtID.Text), txtDescricao.Text)
 
-        Integer.TryParse(Me.txtID.Text, ID)
+        Try
+            objChamado.Gravar()
 
-        Dim descricao As String = Me.txtDescricao.Text
-
-        Dim sucesso As Boolean = Dados.GravarDepartamento(ID, descricao)
-
-        If Not sucesso Then
-            MessageBox.Show(Me, "Falha ao gravar o departamento", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.DialogResult = DialogResult.Cancel
-        Else
-            Me.DialogResult = DialogResult.OK
-        End If
-
-        Me.Close()
+            DialogResult = DialogResult.OK
+        Catch ex As Exception
+            MessageBox.Show(Me, "Falha ao gravar o departamento.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            DialogResult = DialogResult.Cancel
+        Finally
+            Close()
+        End Try
     End Sub
 
 #End Region

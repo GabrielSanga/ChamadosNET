@@ -6,16 +6,16 @@ Public Class frmDepartamentosListar
 #Region "Methods"
 
     Public Sub ListarDepartamentos()
-        Dim dtDepartamentos As DataTable = Dados.ListarDepartamentos()
-        Me.dgvDepartamentos.DataSource = dtDepartamentos
+        Try
+            Dim dtDepartamentos As DataTable = Dados.ListarDepartamentos()
+            Me.dgvDepartamentos.DataSource = dtDepartamentos
+        Catch ex As Exception
+            MessageBox.Show(Me, "Falha ao listar os departamentos.", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Public Sub OpenDepartamentos(Optional idDepartamento As Integer = 0)
-        Dim frm As New frmDepartamentoEditar()
-
-        If idDepartamento > 0 Then
-            frm.AbrirDepartamento(idDepartamento)
-        End If
+        Dim frm As New frmDepartamentoEditar(idDepartamento)
 
         Dim dlgResult As DialogResult = frm.ShowDialog()
 
@@ -33,35 +33,29 @@ Public Class frmDepartamentosListar
     End Sub
 
     Private Sub btnExcluir_Click(sender As Object, e As EventArgs) Handles btnExcluir.Click
-        If Me.dgvDepartamentos.SelectedRows.Count = 0 Then Exit Sub
+        If dgvDepartamentos.SelectedRows.Count = 0 Then Exit Sub
 
-        ' ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+        Dim drv As DataRowView = DirectCast(dgvDepartamentos.SelectedRows(0).DataBoundItem, DataRowView)
 
-        Dim dgvr As DataGridViewRow = Me.dgvDepartamentos.SelectedRows(0)
-        Dim drv As DataRowView = DirectCast(dgvr.DataBoundItem, DataRowView)
+        Dim objDepartamento As New Departamento With {.ID = Util.nInt(drv("ID"))}
 
-        Dim idDepartamento As Integer = CInt(drv("ID"))
+        If MessageBox.Show(Me, $"Confirma a exclusão do Departamento nº {objDepartamento.ID} ?", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Exit Sub
 
-        Dim dlgResult As DialogResult =
-            MessageBox.Show(Me, $"Confirma a exclusão do Departamento nº {idDepartamento} ?",
-                            Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Try
+            objDepartamento.Excluir()
 
-        If dlgResult <> DialogResult.Yes Then Exit Sub
-
-        ' ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-
-        Dim sucesso As Boolean = Dados.ExcluirDepartamento(idDepartamento)
-
-        If sucesso Then ListarDepartamentos()
+            ListarDepartamentos()
+        Catch ex As Exception
+            MessageBox.Show(Me, "Falha ao excluir o departamento.", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click
         If Me.dgvDepartamentos.SelectedRows.Count = 0 Then Exit Sub
 
-        Dim dgvr As DataGridViewRow = Me.dgvDepartamentos.SelectedRows(0)
-        Dim drv As DataRowView = DirectCast(dgvr.DataBoundItem, DataRowView)
+        Dim drv As DataRowView = DirectCast(dgvDepartamentos.SelectedRows(0).DataBoundItem, DataRowView)
 
-        Dim idDepartamento As Integer = CInt(drv("ID"))
+        Dim idDepartamento As Integer = Util.nInt(drv("ID"))
 
         OpenDepartamentos(idDepartamento)
     End Sub
@@ -80,9 +74,7 @@ Public Class frmDepartamentosListar
             Exit Sub
         End If
 
-        Dim idDepartamento As Integer = 0
-
-        Integer.TryParse(dgvDepartamentos.Rows(e.RowIndex).Cells("ID").Value.ToString, idDepartamento)
+        Dim idDepartamento As Integer = Util.nInt(dgvDepartamentos.Rows(e.RowIndex).Cells("ID").Value)
 
         If idDepartamento = 0 Then
             Exit Sub

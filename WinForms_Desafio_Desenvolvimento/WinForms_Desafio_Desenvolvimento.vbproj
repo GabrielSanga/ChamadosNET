@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="BackEnd\clsDados.vb" />
     <Compile Include="Classes\clsChamado.vb" />
+    <Compile Include="Classes\clsDepartamento.vb" />
     <Compile Include="Classes\clsUtil.vb" />
     <Compile Include="frmChamadosEditar.Designer.vb">
       <DependentUpon>frmChamadosEditar.vb</DependentUpon>
