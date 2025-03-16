@@ -30,11 +30,25 @@
     End Sub
 
     Public Sub Gravar()
+        Dim mensagem As String = ""
+
+        If Not Valida(mensagem) Then
+            Throw New Exception(mensagem)
+        End If
+
         Dados.GravarDepartamento(Me)
     End Sub
 
     Public Sub Excluir()
         Dados.ExcluirDepartamento(_ID)
     End Sub
+
+    Public Function Valida(ByRef mensagem As String) As Boolean
+        If _Descricao.Length = 0 Then
+            mensagem = "Descrição é campo de preenchimento obrigatório." : Return False
+        End If
+
+        Return True
+    End Function
 
 End Class

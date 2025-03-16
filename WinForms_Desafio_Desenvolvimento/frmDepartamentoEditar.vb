@@ -43,11 +43,10 @@
             objChamado.Gravar()
 
             DialogResult = DialogResult.OK
-        Catch ex As Exception
-            MessageBox.Show(Me, "Falha ao gravar o departamento.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DialogResult = DialogResult.Cancel
-        Finally
+
             Close()
+        Catch ex As Exception
+            MessageBox.Show(Me, ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
