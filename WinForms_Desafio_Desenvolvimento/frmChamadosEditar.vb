@@ -38,6 +38,8 @@ Public Class frmChamadosEditar
             txtSolicitante.Text = objChamado.Solicitante
             cmbDepartamento.SelectedValue = objChamado.Departamento
             dtpDataAbertura.Value = objChamado.DataAbertura
+
+            dtpDataAbertura.Enabled = False
         End If
     End Sub
 
@@ -53,11 +55,10 @@ Public Class frmChamadosEditar
             objChamado.Gravar()
 
             DialogResult = DialogResult.OK
-        Catch ex As Exception
-            MessageBox.Show(Me, "Falha ao gravar o chamado.", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DialogResult = DialogResult.Cancel
-        Finally
+
             Close()
+        Catch ex As Exception
+            MessageBox.Show(Me, ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

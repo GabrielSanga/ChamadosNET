@@ -63,11 +63,42 @@
     End Sub
 
     Public Sub Gravar()
+        Dim mensagem As String = ""
+
+        If Not Valida(mensagem) Then
+            Throw New Exception(mensagem)
+        End If
+
         Dados.GravarChamado(Me)
     End Sub
 
     Public Sub Excluir()
         Dados.ExcluirChamado(_ID)
     End Sub
+
+    Public Function Valida(ByRef mensagem As String) As Boolean
+        If _Assunto.Length = 0 Then
+            mensagem = "Assunto é campo de preenchimento obrigatório." : Return False
+        End If
+
+        If _Solicitante.Length = 0 Then
+            mensagem = "Solicitante é campo de preenchimento obrigatório." : Return False
+        End If
+
+        If _Departamento = 0 Then
+            mensagem = "Departamento é campo de preenchimento obrigatório." : Return False
+        End If
+
+        If _DataAbertura = DateTime.MinValue Then
+            mensagem = "Data Abertura é campo de preenchimento obrigatório." : Return False
+        End If
+
+        'Caso inclusão e data abertura retroativa
+        If ID = 0 AndAlso DataAbertura.Date < DateTime.Now.Date Then
+            mensagem = "Não é permitido criar chamado com data retroativa." : Return False
+        End If
+
+        Return True
+    End Function
 
 End Class
