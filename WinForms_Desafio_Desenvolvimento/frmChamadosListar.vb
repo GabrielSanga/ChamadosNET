@@ -7,7 +7,7 @@ Public Class frmChamadosListar
 
     Private Sub ListarChamados()
         Dim dtChamados As DataTable = Dados.ListarChamados()
-        Me.dgvChamados.DataSource = dtChamados
+        dgvChamados.DataSource = dtChamados
     End Sub
 
     Private Sub OpenChamado(Optional idChamado As Integer = 0)
@@ -32,23 +32,15 @@ Public Class frmChamadosListar
     End Sub
 
     Private Sub btnExcluir_Click(sender As Object, e As EventArgs) Handles btnExcluir.Click
+        If dgvChamados.SelectedRows.Count = 0 Then Exit Sub
 
-        If Me.dgvChamados.SelectedRows.Count = 0 Then Exit Sub
+        Dim drv As DataRowView = DirectCast(dgvChamados.SelectedRows(0).DataBoundItem, DataRowView)
 
-        ' ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+        Dim idChamado As Integer = Util.nInt(drv("ID"))
 
-        Dim dgvr As DataGridViewRow = Me.dgvChamados.SelectedRows(0)
-        Dim drv As DataRowView = DirectCast(dgvr.DataBoundItem, DataRowView)
-
-        Dim idChamado As Integer = CInt(drv("ID"))
-
-        Dim dlgResult As DialogResult =
-            MessageBox.Show(Me, $"Confirma a exclusão do Chamado nº {idChamado} ?",
-                            Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim dlgResult As DialogResult = MessageBox.Show(Me, $"Confirma a exclusão do Chamado nº {idChamado} ?", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If dlgResult <> DialogResult.Yes Then Exit Sub
-
-        ' ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
         Dim sucesso As Boolean = Dados.ExcluirChamado(idChamado)
 
@@ -56,12 +48,11 @@ Public Class frmChamadosListar
     End Sub
 
     Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click
-        If Me.dgvChamados.SelectedRows.Count = 0 Then Exit Sub
+        If dgvChamados.SelectedRows.Count = 0 Then Exit Sub
 
-        Dim dgvr As DataGridViewRow = Me.dgvChamados.SelectedRows(0)
-        Dim drv As DataRowView = DirectCast(dgvr.DataBoundItem, DataRowView)
+        Dim drv As DataRowView = DirectCast(dgvChamados.SelectedRows(0).DataBoundItem, DataRowView)
 
-        Dim idChamado As Integer = CInt(drv("ID"))
+        Dim idChamado As Integer = Util.nInt(drv("ID"))
 
         OpenChamado(idChamado)
     End Sub
@@ -71,10 +62,8 @@ Public Class frmChamadosListar
     End Sub
 
     Private Sub btnRelatorio_Click(sender As Object, e As EventArgs) Handles btnRelatorio.Click
-
         Dim frm As New frmChamadosRelatorio()
         frm.ShowDialog()
-
     End Sub
 
     Private Sub dgvChamados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvChamados.CellDoubleClick
@@ -82,9 +71,7 @@ Public Class frmChamadosListar
             Exit Sub
         End If
 
-        Dim idChamado As Integer = 0
-
-        Integer.TryParse(dgvChamados.Rows(e.RowIndex).Cells("ID").Value.ToString, idChamado)
+        Dim idChamado As Integer = Util.nInt(dgvChamados.Rows(e.RowIndex).Cells("ID").Value)
 
         If idChamado = 0 Then
             Exit Sub

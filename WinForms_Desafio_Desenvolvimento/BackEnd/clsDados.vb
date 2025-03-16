@@ -38,9 +38,8 @@ Public Class Dados
 
     End Function
 
-    Public Shared Function ObterChamado(ByVal idChamado As Integer) As DataRow
-
-        Dim drChamado As DataRow = Nothing
+    Public Shared Function ObterChamado(idChamado As Integer) As Chamado
+        Dim objChamado As New Chamado
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
 
@@ -49,54 +48,51 @@ Public Class Dados
                 dbCommand.CommandText = $"SELECT * FROM chamados WHERE ID = {idChamado}"
 
                 Using dbDataAdapter As New SQLiteDataAdapter(dbCommand)
-
                     Dim dtChamados As New DataTable()
                     dbDataAdapter.Fill(dtChamados)
-                    drChamado = dtChamados.Rows(0)
 
+                    If dtChamados.Rows.Count > 0 Then
+                        Dim ID As Integer = Util.nInt(dtChamados.Rows(0).Item("ID"))
+                        Dim assunto As String = Util.sStr(dtChamados.Rows(0).Item("Assunto"))
+                        Dim solicitante As String = Util.sStr(dtChamados.Rows(0).Item("Solicitante"))
+                        Dim departamento As Integer = Util.nInt(dtChamados.Rows(0).Item("Departamento"))
+                        Dim dataAbertura As DateTime = DateTime.Parse(CStr(dtChamados.Rows(0).Item("DataAbertura")))
+
+                        objChamado = New Chamado(ID, assunto, solicitante, departamento, dataAbertura)
+                    End If
                 End Using
 
             End Using
 
         End Using
 
-        Return drChamado
-
+        Return objChamado
     End Function
 
-    Public Shared Function GravarChamado(ByVal ID As Integer,
-                                         ByVal Assunto As String,
-                                         ByVal Solicitante As String,
-                                         ByVal Departamento As Integer,
-                                         ByVal DataAbertura As DateTime) As Boolean
-
+    Public Shared Function GravarChamado(objChamado As Chamado) As Boolean
         Dim regsAfetados As Integer = -1
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
 
             Using dbCommand As SQLiteCommand = dbConnection.CreateCommand()
 
-                If ID = 0 Then
-
+                If objChamado.ID = 0 Then
                     dbCommand.CommandText = "INSERT INTO chamados (Assunto,Solicitante,Departamento,DataAbertura)" +
                                             "VALUES (@Assunto,@Solicitante,@Departamento,@DataAbertura)"
-
                 Else
-
                     dbCommand.CommandText = "UPDATE chamados " +
                                             "SET Assunto=@Assunto, " +
                                             "    Solicitante=@Solicitante, " +
                                             "    Departamento=@Departamento, " +
                                             "    DataAbertura=@DataAbertura " +
                                             "WHERE ID=@ID "
-
                 End If
 
-                dbCommand.Parameters.AddWithValue("@Assunto", Assunto)
-                dbCommand.Parameters.AddWithValue("@Solicitante", Solicitante)
-                dbCommand.Parameters.AddWithValue("@Departamento", Departamento)
-                dbCommand.Parameters.AddWithValue("@DataAbertura", DataAbertura.ToShortDateString())
-                dbCommand.Parameters.AddWithValue("@ID", ID)
+                dbCommand.Parameters.AddWithValue("@Assunto", objChamado.Assunto)
+                dbCommand.Parameters.AddWithValue("@Solicitante", objChamado.Solicitante)
+                dbCommand.Parameters.AddWithValue("@Departamento", objChamado.Departamento)
+                dbCommand.Parameters.AddWithValue("@DataAbertura", objChamado.DataAbertura.ToShortDateString())
+                dbCommand.Parameters.AddWithValue("@ID", objChamado.ID)
 
                 dbConnection.Open()
                 regsAfetados = dbCommand.ExecuteNonQuery()
@@ -107,7 +103,6 @@ Public Class Dados
         End Using
 
         Return (regsAfetados > 0)
-
     End Function
 
     Public Shared Function ExcluirChamado(ByVal idChamado As Integer) As Boolean

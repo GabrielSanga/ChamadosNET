@@ -72,6 +72,20 @@ WinForms_Desafio_Desenvolvimento
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:WinForms_Desafio_Desenvolvimento.Util.nInt(System.Object)">
+ <summary>
+ Converte um objeto em inteiro
+ </summary>
+ <param name="pObject"></param>
+ <returns></returns>
+</member>
+<member name="M:WinForms_Desafio_Desenvolvimento.Util.sStr(System.Object)">
+ <summary>
+ Converte um objeto em string
+ </summary>
+ <param name="pObject"></param>
+ <returns></returns>
+</member>
 <member name="T:WinForms_Desafio_Desenvolvimento.dsChamados">
 <summary>
 Represents a strongly typed in-memory cache of data.
