@@ -62,4 +62,12 @@
         _DataAbertura = dataAbertura
     End Sub
 
+    Public Sub Gravar()
+        Dados.GravarChamado(Me)
+    End Sub
+
+    Public Sub Excluir()
+        Dados.ExcluirChamado(_ID)
+    End Sub
+
 End Class

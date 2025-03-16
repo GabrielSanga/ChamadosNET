@@ -8,7 +8,6 @@ Public Class Dados
     ' ------------------------------ CHAMADO ------------------------------
 
     Public Shared Function ListarChamados() As DataTable
-
         Dim dtChamados As New DataTable()
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
@@ -35,7 +34,6 @@ Public Class Dados
         End Using
 
         Return dtChamados
-
     End Function
 
     Public Shared Function ObterChamado(idChamado As Integer) As Chamado
@@ -105,8 +103,7 @@ Public Class Dados
         Return (regsAfetados > 0)
     End Function
 
-    Public Shared Function ExcluirChamado(ByVal idChamado As Integer) As Boolean
-
+    Public Shared Function ExcluirChamado(idChamado As Integer) As Boolean
         Dim regsAfetados As Integer = -1
 
         Using dbConnection As New SQLiteConnection(CONNECTION_STRING)
@@ -124,7 +121,6 @@ Public Class Dados
         End Using
 
         Return (regsAfetados > 0)
-
     End Function
 
     ' ------------------------------ DEPARTAMENTO ------------------------------

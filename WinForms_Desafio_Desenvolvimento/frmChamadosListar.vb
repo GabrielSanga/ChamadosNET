@@ -6,16 +6,16 @@ Public Class frmChamadosListar
 #Region "Methods"
 
     Private Sub ListarChamados()
-        Dim dtChamados As DataTable = Dados.ListarChamados()
-        dgvChamados.DataSource = dtChamados
+        Try
+            Dim dtChamados As DataTable = Dados.ListarChamados()
+            dgvChamados.DataSource = dtChamados
+        Catch ex As Exception
+            MessageBox.Show(Me, "Falha ao listar os chamados", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub OpenChamado(Optional idChamado As Integer = 0)
-        Dim frm As New frmChamadosEditar()
-
-        If idChamado > 0 Then
-            frm.AbrirChamado(idChamado)
-        End If
+        Dim frm As New frmChamadosEditar(idChamado)
 
         Dim dlgResult As DialogResult = frm.ShowDialog()
 
@@ -36,15 +36,17 @@ Public Class frmChamadosListar
 
         Dim drv As DataRowView = DirectCast(dgvChamados.SelectedRows(0).DataBoundItem, DataRowView)
 
-        Dim idChamado As Integer = Util.nInt(drv("ID"))
+        Dim objChamado As New Chamado With {.ID = Util.nInt(drv("ID"))}
 
-        Dim dlgResult As DialogResult = MessageBox.Show(Me, $"Confirma a exclusão do Chamado nº {idChamado} ?", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If MessageBox.Show(Me, $"Confirma a exclusão do Chamado nº {objChamado.ID} ?", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Exit Sub
 
-        If dlgResult <> DialogResult.Yes Then Exit Sub
+        Try
+            objChamado.Excluir()
 
-        Dim sucesso As Boolean = Dados.ExcluirChamado(idChamado)
-
-        If sucesso Then ListarChamados()
+            ListarChamados()
+        Catch ex As Exception
+            MessageBox.Show(Me, "Falha ao excluir o chamado", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click

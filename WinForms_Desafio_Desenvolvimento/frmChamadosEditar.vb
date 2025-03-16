@@ -2,24 +2,22 @@
 
 Public Class frmChamadosEditar
 
+#Region "Variables"
+
+    Public idChamado As Integer = 0
+
+#End Region
+
 #Region "Constructors"
 
     Public Sub New()
         InitializeComponent()
     End Sub
 
-#End Region
+    Public Sub New(idChamado As Integer)
+        InitializeComponent()
 
-#Region "Methods"
-
-    Public Sub AbrirChamado(ByVal idChamado As Integer)
-        Dim objChamado As Chamado = Dados.ObterChamado(idChamado)
-
-        txtID.Text = objChamado.ID.ToString
-        txtAssunto.Text = objChamado.Assunto
-        txtSolicitante.Text = objChamado.Solicitante
-        cmbDepartamento.SelectedValue = objChamado.Departamento
-        dtpDataAbertura.Value = objChamado.DataAbertura
+        Me.idChamado = idChamado
     End Sub
 
 #End Region
@@ -31,6 +29,16 @@ Public Class frmChamadosEditar
         cmbDepartamento.DataSource = dtDepartamentos
         cmbDepartamento.DisplayMember = "Descricao"
         cmbDepartamento.ValueMember = "ID"
+
+        If idChamado > 0 Then
+            Dim objChamado As Chamado = Dados.ObterChamado(idChamado)
+
+            txtID.Text = objChamado.ID.ToString
+            txtAssunto.Text = objChamado.Assunto
+            txtSolicitante.Text = objChamado.Solicitante
+            cmbDepartamento.SelectedValue = objChamado.Departamento
+            dtpDataAbertura.Value = objChamado.DataAbertura
+        End If
     End Sub
 
     Private Sub btnFechar_Click(sender As Object, e As EventArgs) Handles btnFechar.Click
@@ -39,18 +47,18 @@ Public Class frmChamadosEditar
     End Sub
 
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
-        Dim objChamado As New Chamado(Util.nInt(txtID.Text), txtAssunto.Text, txtSolicitante.Text, Util.nInt(cmbDepartamento.SelectedValue), dtpDataAbertura.Value)
+        Try
+            Dim objChamado As New Chamado(Util.nInt(txtID.Text), txtAssunto.Text, txtSolicitante.Text, Util.nInt(cmbDepartamento.SelectedValue), dtpDataAbertura.Value)
 
-        Dim sucesso As Boolean = Dados.GravarChamado(objChamado)
+            objChamado.Gravar()
 
-        If Not sucesso Then
-            MessageBox.Show(Me, "Falha ao gravar o chamado", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DialogResult = DialogResult.Cancel
-        Else
             DialogResult = DialogResult.OK
-        End If
-
-        Close()
+        Catch ex As Exception
+            MessageBox.Show(Me, "Falha ao gravar o chamado.", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            DialogResult = DialogResult.Cancel
+        Finally
+            Close()
+        End Try
     End Sub
 
 #End Region
